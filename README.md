@@ -20,3 +20,11 @@ Déploiement d'une infrastructure de monitoring Zabbix sur AWS pour surveiller u
 - Ubuntu 24.04, Windows Server 2022
 
 ## 📁 Structure
+## Configuration Docker Compose
+
+Le fichier `docker-compose.yml` définit trois services :
+1. **zabbix-db** : Base de données MySQL pour stocker les données de monitoring
+2. **zabbix-server** : Serveur Zabbix principal (port 10051)
+3. **zabbix-web** : Interface web Nginx (port 80)
+
+Les services communiquent via un réseau Docker dédié et utilisent des volumes persistants pour la conservation des données.
